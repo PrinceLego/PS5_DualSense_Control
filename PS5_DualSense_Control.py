@@ -113,18 +113,24 @@ while running:
     # 輸出按鍵和搖桿狀態
     print_button_states(button_states)
     print_axis_states(axis_states)
-
+    print()
 
     print(Cross, Circle, Square, Triangle)
     print(f"\nL X: {Left_X}, L Y: {Left_Y}")
     print(f"R X: {Right_X}, R Y: {Right_Y}")
     print(f"L2: {L2_Trigger}, R2: {R2_Trigger}")
 
+
     if Cross == 1:  # 如果 "叉叉" 按鍵被按下
         print("'叉叉' 按鍵被按下！")
 
-    pygame.time.wait(100)
+    if Left_X > 0.3: 
+        print("!!!!!!!!!")
 
+
+
+
+    pygame.time.wait(100)
     # 退出條件
     if Share == 1:  # 如果 "Share" 按鈕被按下
         print("檢測到 'Share' 按鍵被按下，程式即將退出...")
